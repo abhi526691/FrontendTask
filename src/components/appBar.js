@@ -136,7 +136,7 @@ class TopAppBar extends React.Component {
         const sideList = (
             <div className={classes.list}>
                 <List>
-                    {['Monthly Compliance Dashboard', 'Monthly School Insight Dashboard-Primary'].map((text, index) => (
+                    {['E-mentoring District Level Dashboard', 'E-mentoring Block level Dashboard'].map((text, index) => (
                         <ListItemWithRouter text={text} icon={dashboardIcon} routingURL={this.state.routeList[index]}/>
                     ))}
                 </List>
