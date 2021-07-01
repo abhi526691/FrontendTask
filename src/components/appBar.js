@@ -136,13 +136,13 @@ class TopAppBar extends React.Component {
         const sideList = (
             <div className={classes.list}>
                 <List>
-                    {['Monthly Compliance Dashboard', 'Monthly School Insight Dashboard-Primary','Monthly School Insight Dashboard-Upper Primary'].map((text, index) => (
+                    {['Monthly Compliance Dashboard', 'Monthly School Insight Dashboard-Primary'].map((text, index) => (
                         <ListItemWithRouter text={text} icon={dashboardIcon} routingURL={this.state.routeList[index]}/>
                     ))}
                 </List>
                 <Divider/>
                 <List>
-                    {['Home', 'Video Tutorials'].map((text, index) => (
+                    {['Home'].map((text, index) => (
                         <ListItemWithRouter text={text} icon={otherIcons(index)}
                                             routingURL={this.state.routeList2[index]}/>
                     ))}
@@ -179,9 +179,9 @@ class TopAppBar extends React.Component {
                         <Hidden smDown>
                             <ButtonWithRouter title={"Home"} routingURL={'/'}></ButtonWithRouter>
                         </Hidden>
-                        <Hidden smDown>
+                        {/* <Hidden smDown>
                             <ButtonWithRouter title={"Video Tutorials"} routingURL={'/user-manual/'}></ButtonWithRouter>
-                        </Hidden>
+                        </Hidden> */}
                     </Toolbar>
                 </AppBar>
             </div>
