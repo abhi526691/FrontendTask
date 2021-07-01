@@ -193,7 +193,7 @@ class SchoolDashboard extends Component {
             <div>
                 <Header/>
                 <div>
-                    <Grid container spacing={0} style={{margin: 0, width: '100%'}}>
+                    {/* <Grid container spacing={0} style={{margin: 0, width: '100%'}}>
                         <Grid item xs>
                             <SimpleDropdown
                                 title={"District"}
@@ -216,7 +216,7 @@ class SchoolDashboard extends Component {
                             </SimpleDropdown>
                         </Grid>
                        
-                    </Grid>
+                    </Grid> */}
                     
                     
                     <Iframe url="http://159.65.152.166:3000/public/dashboard/aa8bd7c7-f977-442a-805e-0595becffb54"
