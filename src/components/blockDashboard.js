@@ -38,9 +38,9 @@ export default class BlockDashboard extends Component {
 
     constructor(props) {
         super(props);
-        this.loadData = this.loadData.bind(this);
+        // this.loadData = this.loadData.bind(this);
         this.onSelectDistrict = this.onSelectDistrict.bind(this);
-        this.download = this.download.bind(this);
+        // this.download = this.download.bind(this);
         this.sentenceCase = this.sentenceCase.bind(this);
         this.onLoadIframe = this.onLoadIframe.bind(this);
         this.handleChange = this.handleChange.bind(this);
@@ -48,7 +48,7 @@ export default class BlockDashboard extends Component {
         this.showFile = this.showFile.bind(this);
         this.downloadPDF = this.downloadPDF.bind(this);
         this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
-        this.loadData();
+        // this.loadData();
     }
 
     onLoadIframe() {
@@ -64,19 +64,11 @@ export default class BlockDashboard extends Component {
         });
     }
 
-    download(url) {
-        fetch(url)
-            .then(response => response.json())
-            .then(json => {
-                var districts = json['districts'];
-                this.setState({allData: json, districts: districts});
-            });
-    }
 
-    loadData() {
-        const url = process.env.PUBLIC_URL + "/data.json";
-        this.download(url);
-    }
+    // loadData() {
+    //     const url = process.env.PUBLIC_URL + "/data.json";
+    //     this.download(url);
+    // }
 
     onSelectDistrict = district => {
         const blocks = this.state.allData['Blocks-' + district];
@@ -219,7 +211,7 @@ export default class BlockDashboard extends Component {
         return (
             <div>
                 <Header/>
-                <div>
+                {/* <div>
                     <Grid container spacing={24}>
                         <Grid item xs>
                             <SimpleDropdown
@@ -236,7 +228,7 @@ export default class BlockDashboard extends Component {
                             />
                         </Grid>
                     </Grid>
-                </div>
+                </div> */}
                 <Iframe url="http://159.65.152.166:3000/public/dashboard/57c62caa-be61-45cb-a770-92ecf3a6c733"
                             width="100%"
                             // height="10px"
